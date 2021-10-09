@@ -1,6 +1,10 @@
 FROM node:alpine
 
-WORKDIR /usr/src/app
+RUN cd home \ && mkdir ret
+
+RUN chmod -R 777 /home/ret
+
+WORKDIR /home/ret
 
 COPY package.json ./
 
