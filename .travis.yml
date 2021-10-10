@@ -15,10 +15,10 @@ script :
 deploy :
   provider : elasticbeanstalk
   region : "ap-northeast-2"
-  app : "docker-react-app-test"
-  env : "Dockerreactapptest-env"
+  app : "app-test"
+  env : "Apptest-env"
   bucket_name : "elasticbeanstalk-ap-northeast-2-416263461894"
-  bucket_path : "docker-react-app-test"
+  bucket_path : "app-test"
   on :
     branch : main
   access_key_id : $AWS_ACCESS_KEY
