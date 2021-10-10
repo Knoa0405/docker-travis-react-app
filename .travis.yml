@@ -12,12 +12,15 @@ before_install :
 script :
   - docker run -e CI=true knoa0405/docker-react-app npm run test -- --coverage
   
-# deploy :
-#   provider : elasticbeanstalk
-#   region : "ap-northeast-2"
-#   app : "docker-react-app-test"
-#   env : "Dockerreactapptest-env"
-#   bucket_name : "elasticbeanstalk-ap-northeast-2-416263461894"
-#   bucket_path : "docker-react-app-test"
-#   on :
-#     branch : main
+deploy :
+  provider : elasticbeanstalk
+  region : "ap-northeast-2"
+  app : "docker-react-app-test"
+  env : "Dockerreactapptest-env"
+  bucket_name : "elasticbeanstalk-ap-northeast-2-416263461894"
+  bucket_path : "docker-react-app-test"
+  on :
+    branch : main
+
+access_key_id : $AWS_ACCESS_KEY
+secret_access_key : $AWS_SECRET_ACCESS_KEY
