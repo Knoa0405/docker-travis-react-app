@@ -1,4 +1,4 @@
-FROM node:alpine AS builder
+FROM node:alpine
 
 WORKDIR /home/ret
 
@@ -14,4 +14,4 @@ FROM nginx
 
 EXPOSE 80
 
-COPY --from=builder /home/ret/build /usr/share/nginx/html
+COPY --from=0 /home/ret/build /usr/share/nginx/html
