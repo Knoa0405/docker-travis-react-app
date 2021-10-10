@@ -1,5 +1,9 @@
 FROM node:alpine
 
+RUN cd home \ && mkdir ret
+
+RUN chmod -R 777 /home/ret
+
 WORKDIR /home/ret
 
 COPY package.json ./
