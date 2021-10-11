@@ -15,10 +15,10 @@ script :
 deploy :
   provider : elasticbeanstalk
   region : "ap-northeast-2"
-  app : "app-test"
-  env : "Apptest-env"
+  app : "test1"
+  env : "Test1-env"
   bucket_name : "elasticbeanstalk-ap-northeast-2-416263461894"
-  bucket_path : "app-test"
+  bucket_path : "test1"
   on :
     branch : main
   access_key_id : $AWS_ACCESS_KEY
